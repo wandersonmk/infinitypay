@@ -1,0 +1,150 @@
+:root {
+  --bg-1: #f8efe1;
+  --bg-2: #f4dccf;
+  --card: #fffaf5;
+  --text: #1f1b16;
+  --muted: #5a4f45;
+  --primary: #cc4f12;
+  --primary-hover: #a63f0f;
+  --ok: #1d7a32;
+  --error: #b52b27;
+  --border: #e8d8cb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.65), transparent 32%),
+    radial-gradient(circle at 88% 86%, rgba(255, 255, 255, 0.35), transparent 40%),
+    linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 18px 50px rgba(37, 18, 2, 0.15);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  margin: 8px 0 18px;
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+input:focus {
+  outline: 2px solid rgba(204, 79, 18, 0.25);
+  border-color: var(--primary);
+}
+
+.status {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.status.ok {
+  color: var(--ok);
+}
+
+.status.error {
+  color: var(--error);
+}
+
+.pay-btn {
+  margin-top: 14px;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pay-btn:hover:enabled {
+  background: var(--primary-hover);
+}
+
+.pay-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkout-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.payload-box {
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+pre {
+  margin: 10px 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  max-height: 260px;
+  overflow: auto;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+}
