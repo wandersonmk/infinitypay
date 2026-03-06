@@ -10,7 +10,7 @@ const BASE_PAYLOAD = {
     }
   ],
   order_nsu: "99697f55-b291-4b0d-80bc-b4f07367164d",
-  redirect_url: "https://webhook.agzap.com.br/webhook/687f3ed1-e082-4125-a566-95e9fb1f94fc",
+  redirect_url: "https://app.agzap.com.br/",
   webhook_url: "https://webhook.agzap.com.br/webhook/infinipay"
 };
 
